@@ -1,0 +1,15 @@
+{{ $.Scratch.Add "btnLabel" "Send" }}
+
+<form class="contact-form__form">
+    <div class="contact-form__form-group contact-form__form-group_email">
+        <div class="form-group"><input class="form-group__text" type="email" name="email" placeholder="Email" /></div>
+    </div>
+    <div class="contact-form__form-group contact-form__form-group_message">
+        <div class="form-group"><textarea class="form-group__textarea" name="message" placeholder="Message" rows="1"></textarea></div>
+    </div>
+    <div class="contact-form__form-group contact-form__form-group_button">
+        <button class="contact-form__btn btn btn_yellow" name="message" placeholder="Message" rows="1">
+            {{ $.Scratch.Get "btnLabel" }}
+        </button>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+<div class="slider slider_testimonials js-customers-slider">
+
+	{{ range $index, $value := .Site.Data.testimonials }}
+
+	<div class="slider__item">
+		<div class="testimonial-card-v2">
+			<div class="testimonial-card-v2__card">
+				<div class="testimonial-card-v2__card-header">
+					<div class="testimonial-card-v2__rate">
+						<div class="b-star-rate">
+							<div class="b-star-rate__stars"></div>
+						</div>
+					</div>
+					<time class="testimonial-card-v2__date d-none-desktop-tablet">
+						{{ .date }}
+					</time>
+				</div>
+				<div class="testimonial-card-v2__card-body">
+					<blockquote class="testimonial-card-v2__quote">
+						<p>
+							{{ .quote }}
+						</p>
+					</blockquote>
+					<p class="testimonial-card-v2__work-info d-none-desktop-tablet">
+						{{ .essayInfo }}
+					</p>
+				</div>
+				<div class="testimonial-card-v2__card-footer">
+					<div class="testimonial-card-v2__card-footer-info d-none-mobile">
+						<time class="testimonial-card-v2__date">
+							{{ .date }}
+						</time>
+						<p class="testimonial-card-v2__work-info">
+							{{ .essayInfo }}
+						</p>
+					</div>
+					<div class="testimonial-card-v2__writer">
+						<a class="testimonial-card-v2__writer-avatar" href="#0">
+							<img src="//photo.edubirdie.com/images/photo/{{ .writerID }}.jpg">
+						</a>
+						<div class="testimonial-card-v2__writer-descr">
+							<a class="testimonial-card-v2__writer-name" href="#{{ .writerID }}">
+								{{ .writerName }}
+							</a>
+							<p class="testimonial-card-v2__writer-status">
+								finished paper
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial-card-v2__customer">
+				<p class="testimonial-card-v2__customer-name">
+					{{ .customerName }}<br>
+					({{ .ordersAmount }} orders)
+				</p>
+				<div class="testimonial-card-v2__customer-avatar">
+					<img src="/images/testimonial-card/clients/{{ $index }}.jpg"
+						 srcset="/images/testimonial-card/clients/{{ $index }}@2x.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{ end }}
+
+</div>

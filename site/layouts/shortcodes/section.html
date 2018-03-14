@@ -1,0 +1,17 @@
+<section class="section {{ with .Get "bg-color"}} section_bg_{{.}} {{ end }}">
+	<div class="row">
+		<div class="section__heading">
+			<h2 class="section__title">
+				{{ .Get "title" }}
+			</h2>
+			{{ with .Get "subtitle"}}
+				<p class="section__subtitle">
+					{{.}}
+				</p>
+			{{ end }}
+		</div>
+		<div class="section__content">
+			{{ .Inner  }}
+		</div>
+	</div>
+</section>
